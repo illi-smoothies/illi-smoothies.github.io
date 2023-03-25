@@ -1,0 +1,70 @@
+@font-face {
+  font-family: MuseoCyrl;
+  src: url('../public/fonts/exljbris - Museo Cyrl 300.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url('../public/fonts/exljbris - Museo Cyrl 700.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: MuseoCyrl;
+  src: url('../public/fonts/exljbris - Museo Cyrl 900.otf') format('opentype');
+  font-weight: 900;
+}
+
+:root {
+  font-family: MuseoCyrl, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/**
+ * Global utils
+ */
+.container {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.fw300 {
+  font-weight: 300;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fw900 {
+  font-weight: 900;
+}

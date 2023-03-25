@@ -1,0 +1,27 @@
+import st from './Description.module.css'
+import { useGlobalState } from '../GlobalState.jsx'
+
+export function Description({ className = '' }) {
+  const [{ description }] = useGlobalState()
+
+  return (
+    <div className={[className, st.root].join(' ')}>
+      <div className={st.small}>
+        <span className="fw900">{description.time}</span>{' '}
+        <span className="fw300">| {description.place}</span>
+      </div>
+      <div
+        className={[st.large, 'fw900'].join(' ')}
+        dangerouslySetInnerHTML={{
+          __html: (description.title || '').replace(/\\n/g, '<br/>'),
+        }}
+      />
+      <div className={[st.small, 'fw900'].join(' ')}>
+        {['number', 'year', 'city']
+          .map((f) => description[f])
+          .filter(Boolean)
+          .join(' / ')}
+      </div>
+    </div>
+  )
+}

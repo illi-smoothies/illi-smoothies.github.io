@@ -1,0 +1,35 @@
+.main {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    '. time place'
+    '. title title'
+    'number year city';
+}
+
+.main input {
+}
+
+.main [name="time"] {
+  grid-area: time;
+}
+
+.main [name="place"] {
+  grid-area: place;
+}
+
+.main [name="title"] {
+  grid-area: title;
+}
+
+.main [name="number"] {
+  grid-area: number;
+}
+
+.main [name="year"] {
+  grid-area: year;
+}
+
+.main [name="city"] {
+  grid-area: city;
+}

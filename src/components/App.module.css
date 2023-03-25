@@ -1,0 +1,27 @@
+.main {
+  background-color: black;
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 20px 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+.description {
+  flex: 1 1 auto;
+}
+
+.tableWrapper {
+  background-color: rgba(53, 6, 73, 0.5);
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px 0;
+}
