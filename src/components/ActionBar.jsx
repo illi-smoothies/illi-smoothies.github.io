@@ -4,7 +4,7 @@ import { parseCSV } from '../utils/parseCSV.js'
 import { useGlobalState } from '../GlobalState.jsx'
 
 export function ActionBar({ className = '' }) {
-  const [{ mainRef, description }, setState] = useGlobalState()
+  const [{ mainRef, description, resultsTable }, setState] = useGlobalState()
   const onCsvChange = async (e) => {
     const [file] = e.target.files
     const csvData = await file.text(file)
@@ -49,6 +49,8 @@ export function ActionBar({ className = '' }) {
     a.remove()
   }
 
+  const copyBtnDisabled = resultsTable.rows.length === 0
+
   return (
     <div className={[className, st.main].join(' ')}>
       <label>
@@ -65,8 +67,8 @@ export function ActionBar({ className = '' }) {
         />
       </label>
 
-      <button onClick={onClipboardCopy}>Копировать в буфер</button>
-      <button onClick={onDownload}>Скачать</button>
+      <button disabled={copyBtnDisabled} onClick={onClipboardCopy}>Копировать в буфер</button>
+      <button disabled={copyBtnDisabled} onClick={onDownload}>Скачать</button>
     </div>
   )
 }
