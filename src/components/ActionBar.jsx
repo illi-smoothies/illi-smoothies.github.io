@@ -54,7 +54,7 @@ export function ActionBar({ className = '' }) {
   return (
     <div className={[className, st.main].join(' ')}>
       <label>
-        Данные
+        CSV файл с данными
         <input type="file" accept="text/csv" onChange={onCsvChange} />
       </label>
 

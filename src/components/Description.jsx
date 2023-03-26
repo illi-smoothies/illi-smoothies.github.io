@@ -7,13 +7,13 @@ export function Description({ className = '' }) {
   return (
     <div className={[className, st.root].join(' ')}>
       <div className={[st.small, 'mb10'].join(' ')}>
-        <span className="fw900">{description.time}</span>{' '}
-        <span className="fw300">| {description.place}</span>
+        <span className="fw900">{description.time || "Время и дата"}</span>{' '}
+        <span className="fw300">| {description.place || 'Место'}</span>
       </div>
       <div
         className={[st.large, 'mb10', 'fw900'].join(' ')}
         dangerouslySetInnerHTML={{
-          __html: (description.title || '').replace(/\\n/g, '<br/>'),
+          __html: (description.title || 'Название квиза').replace(/\\n/g, '<br/>'),
         }}
       />
       <div className={[st.small, 'fw900'].join(' ')}>

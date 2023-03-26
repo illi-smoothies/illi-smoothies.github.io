@@ -43,7 +43,7 @@ export function App() {
         </header>
 
         <div className={st.tableWrapper}>
-          <Table />
+          {state.resultsTable.rows.length ? <Table /> : <p style={{ textAlign: 'center' }}>💡Надо загрузить данные</p>}
         </div>
       </main>
     </>
