@@ -4,7 +4,7 @@ import { parseCSV } from '../utils/parseCSV.js'
 import { useGlobalState } from '../GlobalState.jsx'
 
 export function ActionBar({ className = '' }) {
-  const [{ mainRef }, setState] = useGlobalState()
+  const [{ mainRef, description }, setState] = useGlobalState()
   const onCsvChange = async (e) => {
     const [file] = e.target.files
     const csvData = await file.text(file)
@@ -42,7 +42,7 @@ export function ActionBar({ className = '' }) {
 
     let blobUrl = window.URL.createObjectURL(blob)
     let a = document.createElement('a')
-    a.download = 'Results.png' // todo rename cleverly
+    a.download = `${description.number}-${description.year}-${description.city}-${description.title}.png`
     a.href = blobUrl
     document.body.appendChild(a)
     a.click()
