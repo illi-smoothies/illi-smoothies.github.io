@@ -9,8 +9,8 @@ export function Table({ className = '' }) {
     <table className={[className, st.table].join(' ')}>
       <thead>
         <tr>
-          {headers.map((h) => (
-            <td>{h}</td>
+          {headers.map((h, idx) => (
+            <td>{idx === 0 ? <span>{h}</span> : h}</td>
           ))}
         </tr>
       </thead>

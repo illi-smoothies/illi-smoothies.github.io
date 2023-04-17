@@ -23,7 +23,7 @@ export function App() {
 
   const mainStyle = {
     backgroundImage: `
-    linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 300px, rgb(0, 0, 0) 100%), 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 500px, rgb(0, 0, 0) 100%), 
     url(${state.mainBg})
   `,
   }
