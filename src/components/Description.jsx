@@ -17,10 +17,13 @@ export function Description({ className = '' }) {
         }}
       />
       <div className={[st.small, 'fw900'].join(' ')}>
-        {['number', 'year', 'city']
-          .map((f) => description[f])
-          .filter(Boolean)
-          .join(' / ')}
+        <ul className={st.list}>
+          {['number', 'year', 'city']
+            .filter((f) => Boolean(description[f]))
+            .map(f => {
+              return <li key={f} className={f === 'city' ? 'yellow' : ''}>{description[f]}</li>
+            })}
+        </ul>
       </div>
     </div>
   )
